@@ -1,49 +1,110 @@
-# Numbered List Practice: Morning Routine Generator
+# Few-Shot Prompting: Tweet Classifier (Spam vs Not Spam)
 
 ## Objective
-Practice creating and using numbered list prompts to get structured, step-by-step responses from an AI model.
+Create a few-shot prompt that teaches an AI model to classify tweets as either **"Spam"** or **"Not Spam"** by providing clear examples with reasoning.
 
 ---
 
 ## The Prompt
 
 ### Instructions
-Generate a **5-step morning routine** designed for productivity and mental clarity. 
+You are a tweet classification assistant. Your task is to classify each tweet as either **"Spam"** or **"Not Spam"**.
 
-For each step, include:
-- **Action:** What to do
-- **Duration:** How long it should take
-- **Benefit:** Why it helps
+**Definition of Spam:**
+- Contains suspicious links (e.g., bit.ly, short URLs)
+- Promotes scams, fake giveaways, or "too good to be true" offers
+- Uses excessive emojis, ALL CAPS, or repetitive characters to grab attention
+- Asks for personal information (passwords, credit cards, etc.)
+- Has no genuine human engagement value
 
-Format your entire response as a **numbered list** (1 through 5) with clear sub-points under each step.
+**Definition of Not Spam:**
+- Genuine opinions, questions, or personal updates
+- Contains normal conversation or information sharing
+- Links to reputable sources (news, blogs, educational content)
+- Engages with others in a meaningful way
 
 ---
 
-## Example Output (Filled)
+## Few-Shot Examples
 
-### 5-Step Morning Routine for a Productive Day
+### Example 1
+**Tweet:** "🚨🚨 FREE iPhone 15 GIVEAWAY! 🚨🚨 Click here to claim now → bit.ly/free-iphone15 Only 5 left! 🔥🔥🔥"
+**Classification:** Spam
+**Reason:** Suspicious shortened link, too-good-to-be-true offer, excessive emojis and urgency tactics.
 
-1. **Hydrate with Lemon Water**
-   - **Duration:** 2 minutes
-   - **Action:** Drink one glass of warm water with fresh lemon juice immediately after waking.
-   - **Benefit:** Rehydrates your body after 7–8 hours of sleep, kickstarts digestion, and boosts vitamin C intake.
+---
 
-2. **Mindful Breathing or Meditation**
-   - **Duration:** 5–10 minutes
-   - **Action:** Sit in a quiet space, close your eyes, and focus on deep belly breaths. Use an app like Headspace or simply count inhales and exhales.
-   - **Benefit:** Reduces morning anxiety, improves focus, and sets a calm tone for the day ahead.
+### Example 2
+**Tweet:** "Just finished reading 'Atomic Habits' by James Clear. Honestly, it changed my perspective on productivity. Highly recommend! 📚"
+**Classification:** Not Spam
+**Reason:** Genuine personal opinion, no suspicious links, authentic book recommendation.
 
-3. **Dynamic Stretching or Light Exercise**
-   - **Duration:** 10–15 minutes
-   - **Action:** Perform a series of stretches (neck rolls, arm circles, torso twists) or do 3 sets of push-ups, squats, and planks.
-   - **Benefit:** Wakes up your muscles, improves blood circulation, and boosts energy levels naturally.
+---
 
-4. **Cold Shower (or Contrast Shower)**
-   - **Duration:** 3–5 minutes
-   - **Action:** End your regular shower with 30–60 seconds of cold water, gradually increasing tolerance over time.
-   - **Benefit:** Triggers the release of endorphins, sharpens mental alertness, and strengthens immune response.
+### Example 3
+**Tweet:** "✅✅ EARN $10,000 IN 3 DAYS ✅✅ Work from home! No experience needed! DM me for details 💰💰💰"
+**Classification:** Spam
+**Reason:** Unrealistic income promise, excessive symbols/emojis, call-to-action via DM, no legitimate business details.
 
-5. **Plan Your Top 3 Priorities**
-   - **Duration:** 5 minutes
-   - **Action:** Write down your three most important tasks for the day using pen and paper or a digital tool like Notion or Todoist.
-   - **Benefit:** Creates clarity, reduces decision fatigue, and ensures you start the day with intention rather than reaction.
+---
+
+### Example 4
+**Tweet:** "Anyone else experiencing login issues with Twitter/X today? I keep getting error codes and can't access my dashboard."
+**Classification:** Not Spam
+**Reason:** Real user reporting a technical problem, seeking community feedback, no promotional content.
+
+---
+
+### Example 5
+**Tweet:** "🎉🎉 CONGRATULATIONS YOU'VE WON $500 AMAZON GIFT CARD! 🎉🎉 Verify your identity here → tinyurl.com/claim-now"
+**Classification:** Spam
+**Reason:** Fake prize notification, shortened suspicious link, asks for verification (potential personal data harvest).
+
+---
+
+### Example 6
+**Tweet:** "Super excited to announce that our startup just raised $2M in seed funding! Full blog post here: techcrunch.com/startup-funding"
+**Classification:** Not Spam
+**Reason:** Legitimate professional announcement, credible news source link (TechCrunch), genuine company milestone.
+
+---
+
+## Now Classify These Tweets
+
+### Tweet A
+"🌸 Good morning everyone! Hope you all have a beautiful day filled with joy and positivity. Remember to be kind to yourself! ✨"
+
+**Classification:** 
+**Reason:** 
+
+---
+
+### Tweet B
+"🔥🔥 LAST CHANCE! 90% OFF EVERYTHING 🔥🔥 Shop now before it's gone! 👉 https://shrtco.de/6fHk2"
+
+**Classification:** 
+**Reason:** 
+
+---
+
+### Tweet C
+"Can someone recommend a good budget laptop for programming? I'm a computer science student and need something reliable under $800."
+
+**Classification:** 
+**Reason:** 
+
+---
+
+### Tweet D
+"YOU'VE BEEN SELECTED! 🎰 Claim your $1,000 Walmart gift card HERE → cutt.ly/3xGmzPw Hurry, this expires in 24 hrs! ⏰"
+
+**Classification:** 
+**Reason:** 
+
+---
+
+### Tweet E
+"Just adopted this adorable puppy from the local shelter! Meet Milo 🐕 He's already stolen my heart ❤️ #AdoptDontShop"
+
+**Classification:** 
+**Reason:** 
